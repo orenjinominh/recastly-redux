@@ -7,7 +7,7 @@ import exampleVideoData from '../data/exampleVideoData.js';
 console.log(exampleVideoData[0])
 const initialState = {
   videoList: exampleVideoData,
-  currentVideo: exampleVideoData[0]
+  currentVideo: null
 };
 
 const store = createStore(
