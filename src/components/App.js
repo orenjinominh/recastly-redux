@@ -1,17 +1,17 @@
 import React from 'react';
-import VideoList from './VideoList.js';
-import VideoPlayer from './VideoPlayer.js';
-import Search from './Search.js';
-import changeVideoList from '../actions/videoList.js';
-import changeVideo from '../actions/currentVideo.js';
+// import VideoList from './VideoList.js';
+// import VideoPlayer from './VideoPlayer.js';
+// import Search from './Search.js';
+// import changeVideoList from '../actions/videoList.js';
+// import changeVideo from '../actions/currentVideo.js';
 import handleVideoSearch from '../actions/search.js';
 import store from '../store/store.js';
 import SearchContainer from '../containers/SearchContainer.js';
 import VideoListContainer from '../containers/VideoListContainer.js';
 import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 
-var App = () => {
-// class App extends React.Component {
+// var App = () => {
+class App extends React.Component {
 //   constructor(props) {
 //     super(props);
 
@@ -23,9 +23,9 @@ var App = () => {
 //     this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
 //   }
 
-  // componentDidMount() {
-  //   handleVideoSearch('react tutorials');
-  // }
+  componentDidMount() {
+    store.dispatch(handleVideoSearch('boxer puppies'));
+  }
 
   // handleVideoListEntryTitleClick(video) {
   //   this.setState({currentVideo: video});
@@ -47,7 +47,8 @@ var App = () => {
 
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
-    return (
+  render() {
+  return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
@@ -64,6 +65,7 @@ var App = () => {
         </div>
       </div>
     );
+}
 }
 
 export default App;
